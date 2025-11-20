@@ -62,7 +62,7 @@ export class MyreviewPage implements OnInit {
           reviewid: r.id,
           name: r.homeowner_name,
           projectType: r.project_type || 'N/A',
-          projectDate: r.project_date ? new Date(r.project_date).toLocaleDateString() : 'N/A',
+          projectDate: r.project_date || 'N/A',
           comments: r.comments || '',
           avgScore: r.avg_score || 0,
           ratingOverall: r.rating_overall || 0,
