@@ -89,8 +89,7 @@ select {
   --app-gradient: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-secondary));
 
   /* SAFE AREA FIX (moved inside same :root) */
-  --ion-safe-area-top: env(safe-area-inset-top) !important;
-  --ion-safe-area-bottom: env(safe-area-inset-bottom) !important;
+    --ion-safe-area-bottom: env(safe-area-inset-bottom) !important;
 }
 
 html.md,
@@ -244,11 +243,7 @@ ion-toolbar {
 }
 /* STEP 1: REMOVE ANY OLD SAFE-AREA OVERRIDES */
 
-/* STEP 2: Correct safe-area values */
-:root {
-  --ion-safe-area-top: env(safe-area-inset-top) !important;
-  --ion-safe-area-bottom: env(safe-area-inset-bottom) !important;
-}
+
 
 /* STEP 3: Fix bottom gap under tab bar */
 ion-tab-bar {
