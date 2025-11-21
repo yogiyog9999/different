@@ -75,6 +75,18 @@ ion-tab-button {
 }
 
 
+ion-tab-bar {
+  padding-bottom: env(safe-area-inset-bottom) !important;
+  margin-bottom: 0 !important;
+}
+
+ion-tabs {
+  bottom: 0 !important;
+}
+
+ion-content {
+  --padding-bottom: env(safe-area-inset-bottom) !important;
+}
 
 
 
