@@ -87,7 +87,12 @@ select {
 
   /* Gradient */
   --app-gradient: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-secondary));
+
+  /* SAFE AREA FIX (moved inside same :root) */
+  --ion-safe-area-top: env(safe-area-inset-top) !important;
+  --ion-safe-area-bottom: env(safe-area-inset-bottom) !important;
 }
+
 html.md,
 body{ font-family: "Inter", sans-serif;font-size:15px;}
 /* Global Body */
