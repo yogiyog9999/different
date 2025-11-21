@@ -127,3 +127,24 @@ font-size: 14px;
   padding-bottom:0;
   margin-bottom:10px;
 }
+
+
+ion-content.dashboard-page {
+  --padding-bottom: env(safe-area-inset-bottom) !important;
+  --offset-bottom: 0 !important;
+}
+
+.dashboard-section,
+.main-container {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.block-card.latest_review {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+ion-content::part(scroll) {
+  padding-bottom: env(safe-area-inset-bottom) !important;
+}
