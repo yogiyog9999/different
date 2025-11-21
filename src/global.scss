@@ -231,11 +231,28 @@ ion-item-divider {
   padding:20px 30px;
   background: #fff;
 }
-:root {
-  --ion-safe-area-top: 0px !important;
-}
+
 ion-header,
 ion-toolbar {
   padding-top: var(--ion-safe-area-top) !important;
   background-color: #241F23 !important; /* your theme color */
 }
+/* STEP 1: REMOVE ANY OLD SAFE-AREA OVERRIDES */
+
+/* STEP 2: Correct safe-area values */
+:root {
+  --ion-safe-area-top: env(safe-area-inset-top) !important;
+  --ion-safe-area-bottom: env(safe-area-inset-bottom) !important;
+}
+
+/* STEP 3: Fix bottom gap under tab bar */
+ion-tab-bar {
+  padding-bottom: env(safe-area-inset-bottom) !important;
+  margin-bottom: 0 !important;
+}
+
+/* STEP 4: Fix content padding so it doesn’t shift */
+ion-content::part(scroll) {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 8px) !important;
+}
+
